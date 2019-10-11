@@ -1,6 +1,7 @@
 import model.BisectionModel;
 import model.FixedPointModel;
 
+import static model.NewtonRaphsonModel.newtonRaphson;
 import static model.RegulaFalsiModel.regulaFalsi;
 
 public class Q9 {
@@ -18,6 +19,8 @@ public class Q9 {
         FixedPointModel.fixedPoint_funcError( x0, EPSILON, 1000);
 
         regulaFalsi(x0, x1, EPSILON, 1000);
+
+        newtonRaphson(x0, EPSILON, 1000);
 
     }
 

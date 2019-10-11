@@ -8,6 +8,12 @@ public class FunctionUtil {
 
     }
 
+    public static double derivative_func_Q9(double x) {
+
+        return ( -2 ) * ( Math.exp( -2 * x ) ) * x +  Math.exp( -2 * x ) - x * Math.sin( x ) + Math.cos( x ) - 8 * Math.cos( 2 * x );
+
+    }
+
     public static double gFunc_Q8(double x) {
 
         return Math.pow( x+2, .5 );
