@@ -1,6 +1,8 @@
 import model.BisectionModel;
 import model.FixedPointModel;
 
+import static model.RegulaFalsiModel.regulaFalsi;
+
 public class Q9 {
 
     private static final double EPSILON = 0.00001;
@@ -14,6 +16,8 @@ public class Q9 {
         BisectionModel.bisection( a, b, EPSILON );
 
         FixedPointModel.fixedPoint_funcError( x0, EPSILON, 1000);
+
+        regulaFalsi(x0, x1, EPSILON, 1000);
 
     }
 
