@@ -31,6 +31,7 @@ public class NewtonRaphsonModel {
         print_Q9( valueApproximate, x, i, CPUTime );
 
         System.gc();
+
     }
 
 }

@@ -7,7 +7,7 @@ public class RegulaFalsiModel {
 
     public static void regulaFalsi(double x0, double x1, double epsilon, int iterationMax) {
 
-        System.out.println( String.format( "\nBisection Method with x0 = %.1f and x1 = %.1f:\n", x0, x1 ) );
+        System.out.println( String.format( "\nRegula Falsi Method with x0 = %.1f and x1 = %.1f:\n", x0, x1 ) );
 
         int i = 1;
         double f0, f1, f2;

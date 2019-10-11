@@ -1,8 +1,8 @@
-import model.BisectionModel;
-import model.FixedPointModel;
-
+import static model.BisectionModel.bisection;
+import static model.FixedPointModel.fixedPoint_funcError;
 import static model.NewtonRaphsonModel.newtonRaphson;
 import static model.RegulaFalsiModel.regulaFalsi;
+import static model.SecantModel.secant;
 
 public class Q9 {
 
@@ -14,13 +14,15 @@ public class Q9 {
 
         double x0 = 1, x1 = 1.1;
 
-        BisectionModel.bisection( a, b, EPSILON );
-
-        FixedPointModel.fixedPoint_funcError( x0, EPSILON, 1000);
+        bisection( a, b, EPSILON );
 
         regulaFalsi(x0, x1, EPSILON, 1000);
 
         newtonRaphson(x0, EPSILON, 1000);
+
+        secant(x0, x1, EPSILON);
+
+        fixedPoint_funcError( x0, EPSILON, 1000);
 
     }
 
