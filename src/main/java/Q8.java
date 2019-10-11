@@ -10,24 +10,24 @@ public class Q8 {
         double rangeMin = 0;
         double rangeMax = 2;
 
-        double x_Approx = 0, x_Initial, error_Tolerance;
+        double x_Approx = 0, x_Initial;
         int i = 1;
-        int No;
+        int iterationMax;
 
-        Random r = new Random();
+        Random random = new Random();
 
-        x_Initial = rangeMin + (rangeMax - rangeMin) * r.nextDouble();
+        x_Initial = rangeMin + (rangeMax - rangeMin) * random.nextDouble();
 
         System.out.println( "Enter error tolerance: " );
-        error_Tolerance = console.nextDouble();
+        final double error_Tolerance = console.nextDouble();
 
         /*System.out.println( "Enter Maximum Iterations: " );
-        No = console.nextInt();*/
-        No = 1000;
+        iterationMax = console.nextInt();*/
+        iterationMax = 1000;
 
-        while( i < No ) {
+        while( i < iterationMax ) {
 
-            x_Approx = g( x_Initial );
+            x_Approx = gFunc( x_Initial );
 
             if( Math.abs( x_Approx-x_Initial ) < error_Tolerance ){
 
@@ -42,8 +42,8 @@ public class Q8 {
             i++;
             x_Initial = x_Approx;
 
-            if( i > No ){
-                System.out.println( "Method Failed after: " + No );
+            if( i > iterationMax ){
+                System.out.println( "Method Failed after: " + iterationMax );
                 System.out.println();
                 System.exit( 0 );
             }
@@ -54,7 +54,7 @@ public class Q8 {
 
     }
 
-    private static double g(double x) {
+    private static double gFunc(double x) {
 
         return Math.pow( x+2, .5 );
 
