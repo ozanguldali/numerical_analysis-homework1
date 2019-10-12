@@ -44,7 +44,7 @@ public class FixedPointModel {
             x_Initial = x_Approx;
 
             if( i > iterationMax )
-                System.out.println( "Method Failed after: \n" + iterationMax );
+                System.out.println( "Method Failed after: " + iterationMax + " iterations.\n" );
 
 
         }
@@ -85,7 +85,7 @@ public class FixedPointModel {
             x_Initial = x_Approx;
 
             if( i > iterationMax )
-                System.out.println( "Method Failed after: \n" + iterationMax );
+                System.out.println( "Method Failed after: " + iterationMax + " iterations.\n" );
 
         }
 
@@ -104,9 +104,9 @@ public class FixedPointModel {
 
         int i = 1;
 
-        while( i < iterationMax ) {
+        while( i <= iterationMax ) {
 
-            x_Approx = FunctionUtil.Q10.gFunc_1( x_Initial );
+            x_Approx = gFunc_1( x_Initial );
 
             if( Math.abs( func_1( x_Approx ) ) <= epsilon ){
 
@@ -127,10 +127,10 @@ public class FixedPointModel {
             i++;
             x_Initial = x_Approx;
 
-            if( i > iterationMax )
-                System.out.println( "Method Failed after: \n" + iterationMax );
-
         }
+
+        if( i > iterationMax )
+            System.out.println( "Method Failed after: " + iterationMax + " iterations.\n" );
 
         System.gc();
 
@@ -147,7 +147,7 @@ public class FixedPointModel {
 
         int i = 1;
 
-        while( i < iterationMax ) {
+        while( i <= iterationMax ) {
 
             x_Approx = FunctionUtil.Q10.gFunc_2( x_Initial );
 
@@ -170,10 +170,10 @@ public class FixedPointModel {
             i++;
             x_Initial = x_Approx;
 
-            if( i > iterationMax )
-                System.out.println( "Method Failed after: \n" + iterationMax );
-
         }
+
+        if( i > iterationMax )
+            System.out.println( "Method Failed after: " + iterationMax + " iterations.\n" );
 
         System.gc();
 
@@ -190,7 +190,7 @@ public class FixedPointModel {
 
         int i = 1;
 
-        while( i < iterationMax ) {
+        while( i <= iterationMax ) {
 
             x_Approx = FunctionUtil.Q10.gFunc_3( x_Initial );
 
@@ -213,13 +213,12 @@ public class FixedPointModel {
             i++;
             x_Initial = x_Approx;
 
-            if( i > iterationMax )
-                System.out.println( "Method Failed after: \n" + iterationMax );
-
         }
 
-        System.gc();
+        if( i > iterationMax )
+            System.out.println( "Method Failed after: " + iterationMax + " iterations.\n" );
 
+        System.gc();
 
     }
 
@@ -233,7 +232,7 @@ public class FixedPointModel {
 
         int i = 1;
 
-        while( i < iterationMax ) {
+        while( i <= iterationMax ) {
 
             x_Approx = FunctionUtil.Q10.gFunc_4( x_Initial );
 
@@ -256,13 +255,12 @@ public class FixedPointModel {
             i++;
             x_Initial = x_Approx;
 
-            if( i > iterationMax )
-                System.out.println( "Method Failed after: \n" + iterationMax );
-
         }
 
-        System.gc();
+        if( i > iterationMax )
+            System.out.println( "Method Failed after: " + iterationMax + " iterations.\n" );
 
+        System.gc();
 
     }
 

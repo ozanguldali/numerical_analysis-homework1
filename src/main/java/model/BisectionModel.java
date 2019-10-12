@@ -40,7 +40,7 @@ public class BisectionModel {
         }
 
         if ( i > iterationMax )
-            System.out.println( "Method Failed after: \n" + iterationMax );
+            System.out.println( "Method Failed after: " + iterationMax + " iterations.\n" );
 
         else {
 

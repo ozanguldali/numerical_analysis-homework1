@@ -51,13 +51,20 @@ public class NewtonRaphsonModel {
 
         }
 
-        long endTime = System.currentTimeMillis();
+        if( i > iterationMax )
+            System.out.println( "Method Failed after: " + iterationMax + " iterations.\n" );
 
-        double valueApproximate = func_1( x );
+        else {
 
-        long CPUTime = endTime - startTime;
+            long endTime = System.currentTimeMillis();
 
-        print_Q9( valueApproximate, x, i, CPUTime );
+            double valueApproximate = func_1( x );
+
+            long CPUTime = endTime - startTime;
+
+            print_Q9( valueApproximate, x, i, CPUTime );
+
+        }
 
         System.gc();
 
@@ -79,13 +86,20 @@ public class NewtonRaphsonModel {
 
         }
 
-        long endTime = System.currentTimeMillis();
+        if( i > iterationMax )
+            System.out.println( "Method Failed after: " + iterationMax + " iterations.\n" );
 
-        double valueApproximate = func_2( x );
+        else {
 
-        long CPUTime = endTime - startTime;
+            long endTime = System.currentTimeMillis();
 
-        print_Q9( valueApproximate, x, i, CPUTime );
+            double valueApproximate = func_2( x );
+
+            long CPUTime = endTime - startTime;
+
+            print_Q9( valueApproximate, x, i, CPUTime );
+
+        }
 
         System.gc();
 
@@ -107,13 +121,20 @@ public class NewtonRaphsonModel {
 
         }
 
-        long endTime = System.currentTimeMillis();
+        if( i > iterationMax )
+            System.out.println( "Method Failed after: " + iterationMax + " iterations.\n" );
 
-        double valueApproximate = func_3( x );
+        else {
 
-        long CPUTime = endTime - startTime;
+            long endTime = System.currentTimeMillis();
 
-        print_Q9( valueApproximate, x, i, CPUTime );
+            double valueApproximate = func_3( x );
+
+            long CPUTime = endTime - startTime;
+
+            print_Q9( valueApproximate, x, i, CPUTime );
+
+        }
 
         System.gc();
 
@@ -135,13 +156,20 @@ public class NewtonRaphsonModel {
 
         }
 
-        long endTime = System.currentTimeMillis();
+        if( i > iterationMax )
+            System.out.println( "Method Failed after: " + iterationMax + " iterations.\n" );
 
-        double valueApproximate = func_4( x );
+        else {
 
-        long CPUTime = endTime - startTime;
+            long endTime = System.currentTimeMillis();
 
-        print_Q9( valueApproximate, x, i, CPUTime );
+            double valueApproximate = func_4( x );
+
+            long CPUTime = endTime - startTime;
+
+            print_Q9( valueApproximate, x, i, CPUTime );
+
+        }
 
         System.gc();
 
