@@ -1,8 +1,8 @@
 package model;
 
 import static helper.PrinterHelper.print_Q9;
-import static util.FunctionUtil.derivative_func_Q9;
-import static util.FunctionUtil.func_Q9;
+import static util.FunctionUtil.Q9.derivativeFunc;
+import static util.FunctionUtil.Q9.func;
 
 public class AitkensDeltaSquaredModel {
 
@@ -16,10 +16,10 @@ public class AitkensDeltaSquaredModel {
 
         double x = x0;
 
-        while ( Math.abs( func_Q9( x ) ) > epsilon && i <= iterationMax ) {
+        while ( Math.abs( func( x ) ) > epsilon && i <= iterationMax ) {
 
-            double x1 = x - func_Q9( x ) / derivative_func_Q9( x );
-            double x2 = x1 - func_Q9( x1 ) / derivative_func_Q9( x1 );
+            double x1 = x - func( x ) / derivativeFunc( x );
+            double x2 = x1 - func( x1 ) / derivativeFunc( x1 );
 
             x = x - ( x1 - x ) / ( x2 - 2 * x1 - x );
 
@@ -34,7 +34,7 @@ public class AitkensDeltaSquaredModel {
 
             long endTime = System.currentTimeMillis();
 
-            double valueApproximate = func_Q9( x );
+            double valueApproximate = func( x );
 
             long CPUTime = endTime - startTime;
 

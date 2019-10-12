@@ -1,7 +1,7 @@
 import static model.AitkensDeltaSquaredModel.aitkensDeltaSquared;
 import static model.BisectionModel.bisection;
-import static model.FixedPointModel.fixedPoint_funcError;
-import static model.NewtonRaphsonModel.newtonRaphson;
+import static model.FixedPointModel.fixedPointFuncError_Q9;
+import static model.NewtonRaphsonModel.newtonRaphson_Q9;
 import static model.RegulaFalsiModel.regulaFalsi;
 import static model.SecantModel.secant;
 
@@ -23,7 +23,7 @@ public class Q9 {
 
         System.out.println( "---" );
 
-        newtonRaphson(x0, EPSILON, 1000);
+        newtonRaphson_Q9(x0, EPSILON, 1000);
 
         System.out.println( "---" );
 
@@ -35,7 +35,7 @@ public class Q9 {
 
         System.out.println( "---" );
 
-        fixedPoint_funcError( x0, EPSILON, 1000);
+        fixedPointFuncError_Q9( x0, EPSILON, 1000);
 
     }
 

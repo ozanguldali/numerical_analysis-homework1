@@ -1,7 +1,7 @@
 package model;
 
 import static helper.PrinterHelper.print_Q9;
-import static util.FunctionUtil.func_Q9;
+import static util.FunctionUtil.Q9.func;
 
 public class RegulaFalsiModel {
 
@@ -17,12 +17,12 @@ public class RegulaFalsiModel {
 
         do {
 
-            f0 = func_Q9( x0 );
-            f1 = func_Q9( x1 );
+            f0 = func( x0 );
+            f1 = func( x1 );
             
             x2 = x1 - f1 * ( x0 - x1 ) / ( f0 - f1 );
             
-            f2 = func_Q9( x2 );
+            f2 = func( x2 );
 
             if ( ( f2 > 0 && f0 < 0 ) || ( f2 < 0 && f0 > 0 ) )
                 x1 = x2;

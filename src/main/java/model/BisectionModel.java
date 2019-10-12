@@ -1,7 +1,7 @@
 package model;
 
 import static helper.PrinterHelper.print_Q9;
-import static util.FunctionUtil.func_Q9;
+import static util.FunctionUtil.Q9.func;
 
 public class BisectionModel {
 
@@ -13,7 +13,7 @@ public class BisectionModel {
 
         int i = 1;
 
-        if ( func_Q9( a ) * func_Q9( b ) >= 0) {
+        if ( func( a ) * func( b ) >= 0) {
 
             System.out.println("You have not assumed right a and b");
             return;
@@ -22,16 +22,16 @@ public class BisectionModel {
 
         double c = a;
 
-        while ( Math.abs( func_Q9( c ) ) > epsilon ) {
+        while ( Math.abs( func( c ) ) > epsilon ) {
 
             c = ( a + b ) / 2;
 
             i++;
 
-            if ( func_Q9( c ) == 0.0 )
+            if ( func( c ) == 0.0 )
                 break;
 
-            else if ( func_Q9( c ) * func_Q9( a ) < 0)
+            else if ( func( c ) * func( a ) < 0)
                 b = c;
 
             else
@@ -46,7 +46,7 @@ public class BisectionModel {
 
             long endTime = System.currentTimeMillis();
 
-            double valueApproximate = func_Q9( c );
+            double valueApproximate = func( c );
 
             long CPUTime = endTime - startTime;
 

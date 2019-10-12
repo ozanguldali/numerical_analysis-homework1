@@ -1,12 +1,13 @@
 package model;
 
 import static helper.PrinterHelper.print_Q9;
-import static util.FunctionUtil.derivative_func_Q9;
-import static util.FunctionUtil.func_Q9;
+import static util.FunctionUtil.Q10.*;
+import static util.FunctionUtil.Q9.derivativeFunc;
+import static util.FunctionUtil.Q9.func;
 
 public class NewtonRaphsonModel {
 
-    public static void newtonRaphson(double x, double epsilon, int iterationMax) {
+    public static void newtonRaphson_Q9(double x, double epsilon, int iterationMax) {
 
         System.out.println( String.format( "\nNewton Raphson Method with x0 = %.1f:\n", x ) );
 
@@ -14,9 +15,9 @@ public class NewtonRaphsonModel {
 
         int i = 1;
 
-        while ( Math.abs( func_Q9( x ) ) > epsilon && i <= iterationMax ) {
+        while ( Math.abs( func( x ) ) > epsilon && i <= iterationMax ) {
 
-            x = x - func_Q9( x ) / derivative_func_Q9( x );
+            x = x - func( x ) / derivativeFunc( x );
 
             i++;
 
@@ -24,7 +25,119 @@ public class NewtonRaphsonModel {
 
         long endTime = System.currentTimeMillis();
 
-        double valueApproximate = func_Q9( x );
+        double valueApproximate = func( x );
+
+        long CPUTime = endTime - startTime;
+
+        print_Q9( valueApproximate, x, i, CPUTime );
+
+        System.gc();
+
+    }
+
+    public static void newtonRaphson_Q10_1(double x, double epsilon, int iterationMax) {
+
+        System.out.println( String.format( "\nNewton Raphson Method with x0 = %.1f:\n", x ) );
+
+        long startTime = System.currentTimeMillis();
+
+        int i = 1;
+
+        while ( Math.abs( func_1( x ) ) > epsilon && i <= iterationMax ) {
+
+            x = x - func_1( x ) / derivativeFunc_1( x );
+
+            i++;
+
+        }
+
+        long endTime = System.currentTimeMillis();
+
+        double valueApproximate = func_1( x );
+
+        long CPUTime = endTime - startTime;
+
+        print_Q9( valueApproximate, x, i, CPUTime );
+
+        System.gc();
+
+    }
+
+    public static void newtonRaphson_Q10_2(double x, double epsilon, int iterationMax) {
+
+        System.out.println( String.format( "\nNewton Raphson Method with x0 = %.1f:\n", x ) );
+
+        long startTime = System.currentTimeMillis();
+
+        int i = 1;
+
+        while ( Math.abs( func_2( x ) ) > epsilon && i <= iterationMax ) {
+
+            x = x - func_2( x ) / derivativeFunc_2( x );
+
+            i++;
+
+        }
+
+        long endTime = System.currentTimeMillis();
+
+        double valueApproximate = func_2( x );
+
+        long CPUTime = endTime - startTime;
+
+        print_Q9( valueApproximate, x, i, CPUTime );
+
+        System.gc();
+
+    }
+
+    public static void newtonRaphson_Q10_3(double x, double epsilon, int iterationMax) {
+
+        System.out.println( String.format( "\nNewton Raphson Method with x0 = %.1f:\n", x ) );
+
+        long startTime = System.currentTimeMillis();
+
+        int i = 1;
+
+        while ( Math.abs( func_3( x ) ) > epsilon && i <= iterationMax ) {
+
+            x = x - func_3( x ) / derivativeFunc_3( x );
+
+            i++;
+
+        }
+
+        long endTime = System.currentTimeMillis();
+
+        double valueApproximate = func_3( x );
+
+        long CPUTime = endTime - startTime;
+
+        print_Q9( valueApproximate, x, i, CPUTime );
+
+        System.gc();
+
+    }
+
+    public static void newtonRaphson_Q10_4(double x, double epsilon, int iterationMax) {
+
+        System.out.println( String.format( "\nNewton Raphson Method with x0 = %.1f:\n", x ) );
+
+        long startTime = System.currentTimeMillis();
+
+        int i = 1;
+
+        while ( Math.abs( func_4( x ) ) > epsilon && i <= iterationMax ) {
+
+            x = x - func_4( x ) / derivativeFunc_4( x );
+
+            i++;
+
+        }
+
+        long endTime = System.currentTimeMillis();
+
+        double valueApproximate = func_4( x );
 
         long CPUTime = endTime - startTime;
 

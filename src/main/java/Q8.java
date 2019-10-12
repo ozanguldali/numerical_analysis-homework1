@@ -2,7 +2,7 @@ import java.util.Locale;
 import java.util.Random;
 import java.util.Scanner;
 
-import static model.FixedPointModel.fixedPoint_rootError;
+import static model.FixedPointModel.fixedPointRootError;
 
 public class Q8 {
 
@@ -13,7 +13,7 @@ public class Q8 {
         double rangeMin = 0;
         double rangeMax = 2;
 
-        double x_Approx = 0, x_Initial;
+        double x_Initial;
         int iterationMax;
 
         Random random = new Random();
@@ -27,11 +27,9 @@ public class Q8 {
         iterationMax = console.nextInt();*/
         iterationMax = 1000;
 
-        fixedPoint_rootError( x_Initial, error_Tolerance, iterationMax );
+        fixedPointRootError( x_Initial, error_Tolerance, iterationMax );
 
 
     }
-
-
 
 }

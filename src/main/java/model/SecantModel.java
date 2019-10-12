@@ -1,7 +1,7 @@
 package model;
 
 import static helper.PrinterHelper.print_Q9;
-import static util.FunctionUtil.func_Q9;
+import static util.FunctionUtil.Q9.func;
 
 public class SecantModel {
 
@@ -17,9 +17,9 @@ public class SecantModel {
             
         do {
 
-            x0 = ( x1 * func_Q9( x2 ) - x2 * func_Q9( x1 ) ) / ( func_Q9( x2 ) - func_Q9( x1 ) );
+            x0 = ( x1 * func( x2 ) - x2 * func( x1 ) ) / ( func( x2 ) - func( x1 ) );
 
-            checkValue = func_Q9( x1 ) * func_Q9( x0 );
+            checkValue = func( x1 ) * func( x0 );
 
             x1 = x2;
             x2 = x0;
@@ -29,13 +29,13 @@ public class SecantModel {
             if ( checkValue == 0 )
                 break;
 
-            x_n = (x1 * func_Q9( x2 ) - x2 * func_Q9( x1 ) ) / ( func_Q9( x2 ) - func_Q9( x1 ) );
+            x_n = (x1 * func( x2 ) - x2 * func( x1 ) ) / ( func( x2 ) - func( x1 ) );
 
-        } while ( Math.abs( func_Q9( x_n ) ) > epsilon && i <= iterationMax );
+        } while ( Math.abs( func( x_n ) ) > epsilon && i <= iterationMax );
 
         long endTime = System.currentTimeMillis();
 
-        double valueApproximate = func_Q9( x_n );
+        double valueApproximate = func( x_n );
 
         long CPUTime = endTime - startTime;
 
