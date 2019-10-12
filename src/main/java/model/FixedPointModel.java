@@ -41,11 +41,9 @@ public class FixedPointModel {
             i++;
             x_Initial = x_Approx;
 
-            if( i > iterationMax ){
-                System.out.println( "Method Failed after: " + iterationMax );
-                System.out.println();
-                System.exit( 0 );
-            }
+            if( i > iterationMax )
+                System.out.println( "Method Failed after: \n" + iterationMax );
+
 
         }
 
@@ -84,11 +82,8 @@ public class FixedPointModel {
             i++;
             x_Initial = x_Approx;
 
-            if( i > iterationMax ){
-                System.out.println( "Method Failed after: " + iterationMax );
-                System.out.println();
-                System.exit( 0 );
-            }
+            if( i > iterationMax )
+                System.out.println( "Method Failed after: \n" + iterationMax );
 
         }
 

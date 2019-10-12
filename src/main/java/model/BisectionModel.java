@@ -5,7 +5,7 @@ import static util.FunctionUtil.func_Q9;
 
 public class BisectionModel {
 
-    public static void bisection(double a, double b, double epsilon) {
+    public static void bisection(double a, double b, double epsilon, int iterationMax) {
 
         System.out.println( String.format( "\nBisection Method with a = %.1f and b = %.1f:\n", a, b ) );
 
@@ -39,13 +39,20 @@ public class BisectionModel {
 
         }
 
-        long endTime = System.currentTimeMillis();
+        if ( i > iterationMax )
+            System.out.println( "Method Failed after: \n" + iterationMax );
 
-        double valueApproximate = func_Q9( c );
+        else {
 
-        long CPUTime = endTime - startTime;
+            long endTime = System.currentTimeMillis();
 
-        print_Q9( valueApproximate, c, i, CPUTime );
+            double valueApproximate = func_Q9( c );
+
+            long CPUTime = endTime - startTime;
+
+            print_Q9( valueApproximate, c, i, CPUTime );
+
+        }
 
         System.gc();
 

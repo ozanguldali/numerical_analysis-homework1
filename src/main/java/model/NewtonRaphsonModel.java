@@ -14,9 +14,9 @@ public class NewtonRaphsonModel {
 
         int i = 1;
 
-        while (Math.abs( func_Q9( x ) ) > epsilon && i <= iterationMax ) {
+        while ( Math.abs( func_Q9( x ) ) > epsilon && i <= iterationMax ) {
 
-            x = x - func_Q9(x) / derivative_func_Q9(x);
+            x = x - func_Q9( x ) / derivative_func_Q9( x );
 
             i++;
 

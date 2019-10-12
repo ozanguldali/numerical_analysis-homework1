@@ -5,7 +5,7 @@ import static util.FunctionUtil.func_Q9;
 
 public class SecantModel {
 
-    public static void secant(double x1, double x2, double epsilon) {
+    public static void secant(double x1, double x2, double epsilon, int iterationMax) {
 
         System.out.println( String.format( "\nSecant Method with x0 = %.1f and x1 = %.1f:\n", x1, x2) );
 
@@ -13,7 +13,7 @@ public class SecantModel {
 
         double x_n = 0, x0, checkValue;
 
-        int  i = 1;
+        int  i = 0;
             
         do {
 
@@ -31,7 +31,7 @@ public class SecantModel {
 
             x_n = (x1 * func_Q9( x2 ) - x2 * func_Q9( x1 ) ) / ( func_Q9( x2 ) - func_Q9( x1 ) );
 
-        } while ( Math.abs( func_Q9( x_n ) ) > epsilon );
+        } while ( Math.abs( func_Q9( x_n ) ) > epsilon && i <= iterationMax );
 
         long endTime = System.currentTimeMillis();
 

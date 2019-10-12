@@ -9,7 +9,7 @@ public class RegulaFalsiModel {
 
         System.out.println( String.format( "\nRegula Falsi Method with x0 = %.1f and x1 = %.1f:\n", x0, x1 ) );
 
-        int i = 1;
+        int i = 0;
         double f0, f1, f2;
         double x2;
 
