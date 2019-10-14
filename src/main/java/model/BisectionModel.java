@@ -1,6 +1,8 @@
 package model;
 
 import static helper.PrinterHelper.print_Q9;
+import static helper.ReportHelper.globalResultMap;
+import static helper.ReportHelper.setGlobalResultMap;
 import static util.FunctionUtil.Q9.func;
 
 public class BisectionModel {
