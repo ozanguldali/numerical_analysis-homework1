@@ -26,10 +26,10 @@ public class PrinterHelper {
 
         for ( String model : compareTableQ9.keySet() ) {
 
-            System.out.println( String.format( "| %-19s | %-15f | %-8f | %-16f | %-13f |", model
+            System.out.println( String.format( "| %-19s | %-15f | %-8f | %-16d | %-13f |", model
                                                                                     , ( Double ) compareTableQ9.get( model ).get( "convergence" )
                                                                                     , ( Double ) compareTableQ9.get( model ).get( "root" )
-                                                                                    , compareTableQ9.get( model ).get("iteration")
+                                                                                    , ( ( Double ) compareTableQ9.get( model ).get("iteration") ).intValue()
                                                                                     , ( Double ) compareTableQ9.get( model ).get( "cpu" ) ) );
 
         }
