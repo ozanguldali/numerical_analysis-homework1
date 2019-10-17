@@ -6,6 +6,8 @@ import static helper.ReportHelper.*;
 
 public class PrinterHelper {
 
+    private static Double NaN = Double.POSITIVE_INFINITY - Double.POSITIVE_INFINITY;
+
     public static void print_Q9(double valueAppx, double rootAppx, int iteration, long CPUTime ) {
 
         System.out.printf( "The Convergence = %f | The Root = %f | Iteration Number: %d | CPU Time (ms) : %d%n\n" , valueAppx, rootAppx , iteration, CPUTime );
@@ -27,10 +29,10 @@ public class PrinterHelper {
         for ( String model : compareTableQ9.keySet() ) {
 
             System.out.println( String.format( "| %-19s | %-15f | %-8f | %-16d | %-13f |", model
-                                                                                    , ( Double ) compareTableQ9.get( model ).get( "convergence" )
-                                                                                    , ( Double ) compareTableQ9.get( model ).get( "root" )
-                                                                                    , ( ( Double ) compareTableQ9.get( model ).get("iteration") ).intValue()
-                                                                                    , ( Double ) compareTableQ9.get( model ).get( "cpu" ) ) );
+                                                                                    , compareTableQ9.get( model ).get( "convergence" ) == null ? NaN : ( Double ) compareTableQ9.get( model ).get( "convergence" )
+                                                                                    , compareTableQ9.get( model ).get( "root" ) == null ? NaN : ( Double ) compareTableQ9.get( model ).get( "root" )
+                                                                                    , compareTableQ9.get( model ).get("iteration") == null ? NaN.intValue() : ( ( Double ) compareTableQ9.get( model ).get("iteration") ).intValue()
+                                                                                    , compareTableQ9.get( model ).get( "cpu" ) == null ? NaN : ( Double ) compareTableQ9.get( model ).get( "cpu" ) ) );
 
         }
 
