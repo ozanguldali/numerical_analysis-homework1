@@ -6,9 +6,9 @@ import static model.FixedPointModel.fixedPointRootError;
 
 public class Q8 {
 
-    public static void main(String[] args) {
+    private static final double EPSILON = 0.0000000001;
 
-        Scanner console = new Scanner( System.in ).useLocale( Locale.US );
+    public static void main(String[] args) {
 
         double rangeMin = 0;
         double rangeMax = 2;
@@ -20,15 +20,9 @@ public class Q8 {
 
         x_Initial = rangeMin + (rangeMax - rangeMin) * random.nextDouble();
 
-        System.out.println( "Enter error tolerance: " );
-        final double error_Tolerance = console.nextDouble();
-
-        /*System.out.println( "Enter Maximum Iterations: " );
-        iterationMax = console.nextInt();*/
         iterationMax = 1000;
 
-        fixedPointRootError( x_Initial, error_Tolerance, iterationMax );
-
+        fixedPointRootError( x_Initial, EPSILON, iterationMax );
 
     }
 

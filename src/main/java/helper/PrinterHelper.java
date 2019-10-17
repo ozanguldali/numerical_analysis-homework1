@@ -14,9 +14,9 @@ public class PrinterHelper {
 
     }
 
-    public static void print_Q8(double rootAppx, double epsilom, int iteration, long CPUTime ) {
+    public static void print_Q8(double rootAppx, double epsilon, int iteration, long CPUTime ) {
 
-        System.out.println( "The Approximate Value x is reached on " + iteration + " step depending on " + epsilom + " as = " + rootAppx + " in " + CPUTime + " ms\n" );
+        System.out.println( "The Approximate Value x is reached on " + iteration + " with error tolerance " + epsilon + " as [ " + rootAppx + " ] in " + CPUTime + " ms\n" );
 
     }
 
