@@ -4,6 +4,7 @@ import util.FunctionUtil;
 
 import static helper.PrinterHelper.print_Q8;
 import static helper.PrinterHelper.print_Q9;
+import static helper.TimeHelper.getDate;
 import static util.FunctionUtil.Q10.*;
 import static util.FunctionUtil.Q8.gFunc;
 import static util.FunctionUtil.Q9.func;
@@ -16,7 +17,8 @@ public class FixedPointModel {
 
         double x_Approx;
 
-        long startTime = System.currentTimeMillis();
+//        long startTime = System.currentTimeMillis();
+        long startTime = getDate();
 
         int i = 1;
 
@@ -26,7 +28,8 @@ public class FixedPointModel {
 
             if( Math.abs( x_Approx-x_Initial ) < epsilon ){
 
-                long endTime = System.currentTimeMillis();
+    //            long endTime = System.currentTimeMillis();
+            long endTime = getDate();
 
                 long CPUTime = endTime - startTime;
 
@@ -57,7 +60,8 @@ public class FixedPointModel {
 
         double x_Approx;
 
-        long startTime = System.currentTimeMillis();
+//        long startTime = System.currentTimeMillis();
+        long startTime = getDate();
 
         int i = 1;
 
@@ -67,7 +71,8 @@ public class FixedPointModel {
 
             if( Math.abs( func( x_Approx ) ) <= epsilon ){
 
-                long endTime = System.currentTimeMillis();
+    //            long endTime = System.currentTimeMillis();
+            long endTime = getDate();
 
                 double f_Approx = func( x_Approx );
 
@@ -100,7 +105,8 @@ public class FixedPointModel {
 
         double x_Approx;
 
-        long startTime = System.currentTimeMillis();
+//        long startTime = System.currentTimeMillis();
+        long startTime = getDate();
 
         int i = 1;
 
@@ -110,7 +116,8 @@ public class FixedPointModel {
 
             if( Math.abs( func_1( x_Approx ) ) <= epsilon ){
 
-                long endTime = System.currentTimeMillis();
+    //            long endTime = System.currentTimeMillis();
+            long endTime = getDate();
 
                 double f_Approx = func_1( x_Approx );
 
@@ -143,7 +150,8 @@ public class FixedPointModel {
 
         double x_Approx;
 
-        long startTime = System.currentTimeMillis();
+//        long startTime = System.currentTimeMillis();
+        long startTime = getDate();
 
         int i = 1;
 
@@ -153,7 +161,8 @@ public class FixedPointModel {
 
             if( Math.abs( func_2( x_Approx ) ) <= epsilon ){
 
-                long endTime = System.currentTimeMillis();
+    //            long endTime = System.currentTimeMillis();
+            long endTime = getDate();
 
                 double f_Approx = func_2( x_Approx );
 
@@ -186,7 +195,8 @@ public class FixedPointModel {
 
         double x_Approx;
 
-        long startTime = System.currentTimeMillis();
+//        long startTime = System.currentTimeMillis();
+        long startTime = getDate();
 
         int i = 1;
 
@@ -196,7 +206,8 @@ public class FixedPointModel {
 
             if( Math.abs( func_3( x_Approx ) ) <= epsilon ){
 
-                long endTime = System.currentTimeMillis();
+    //            long endTime = System.currentTimeMillis();
+            long endTime = getDate();
 
                 double f_Approx = func_3( x_Approx );
 
@@ -228,7 +239,8 @@ public class FixedPointModel {
 
         double x_Approx;
 
-        long startTime = System.currentTimeMillis();
+//        long startTime = System.currentTimeMillis();
+        long startTime = getDate();
 
         int i = 1;
 
@@ -238,7 +250,8 @@ public class FixedPointModel {
 
             if( Math.abs( func_4( x_Approx ) ) <= epsilon ){
 
-                long endTime = System.currentTimeMillis();
+    //            long endTime = System.currentTimeMillis();
+            long endTime = getDate();
 
                 double f_Approx = func_4( x_Approx );
 

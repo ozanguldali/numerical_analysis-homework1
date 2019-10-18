@@ -1,6 +1,7 @@
 package model;
 
 import static helper.PrinterHelper.print_Q9;
+import static helper.TimeHelper.getDate;
 import static util.FunctionUtil.Q9.func;
 
 public class SecantModel {
@@ -9,12 +10,13 @@ public class SecantModel {
 
         System.out.println( String.format( "\nSecant Method with x0 = %.1f and x1 = %.1f:\n", x1, x2) );
 
-        long startTime = System.currentTimeMillis();
+//        long startTime = System.currentTimeMillis();
+        long startTime = getDate();
 
         double x_n = 0, x0, checkValue;
 
         int  i = 0;
-            
+
         do {
 
             x0 = ( x1 * func( x2 ) - x2 * func( x1 ) ) / ( func( x2 ) - func( x1 ) );
@@ -33,7 +35,8 @@ public class SecantModel {
 
         } while ( Math.abs( func( x_n ) ) > epsilon && i <= iterationMax );
 
-        long endTime = System.currentTimeMillis();
+        // long endTime = System.currentTimeMillis();
+            long endTime = getDate();
 
         double valueApproximate = func( x_n );
 
@@ -43,5 +46,5 @@ public class SecantModel {
 
         System.gc();
     }
-    
+
 }

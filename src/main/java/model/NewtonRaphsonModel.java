@@ -1,6 +1,7 @@
 package model;
 
 import static helper.PrinterHelper.print_Q9;
+import static helper.TimeHelper.getDate;
 import static util.FunctionUtil.Q10.*;
 import static util.FunctionUtil.Q9.derivativeFunc;
 import static util.FunctionUtil.Q9.func;
@@ -11,7 +12,8 @@ public class NewtonRaphsonModel {
 
         System.out.println( String.format( "\nNewton Raphson Method with x0 = %.1f:\n", x ) );
 
-        long startTime = System.currentTimeMillis();
+//        long startTime = System.currentTimeMillis();
+        long startTime = getDate();
 
         int i = 1;
 
@@ -23,7 +25,8 @@ public class NewtonRaphsonModel {
 
         }
 
-        long endTime = System.currentTimeMillis();
+        // long endTime = System.currentTimeMillis();
+        long endTime = getDate();
 
         double valueApproximate = func( x );
 
@@ -39,7 +42,8 @@ public class NewtonRaphsonModel {
 
         System.out.println( String.format( "\nNewton Raphson Method with x0 = %.1f:\n", x ) );
 
-        long startTime = System.currentTimeMillis();
+//        long startTime = System.currentTimeMillis();
+        long startTime = getDate();
 
         int i = 1;
 
@@ -56,7 +60,8 @@ public class NewtonRaphsonModel {
 
         else {
 
-            long endTime = System.currentTimeMillis();
+//            long endTime = System.currentTimeMillis();
+            long endTime = getDate();
 
             double valueApproximate = func_1( x );
 
@@ -74,7 +79,8 @@ public class NewtonRaphsonModel {
 
         System.out.println( String.format( "\nNewton Raphson Method with x0 = %.1f:\n", x ) );
 
-        long startTime = System.currentTimeMillis();
+//        long startTime = System.currentTimeMillis();
+        long startTime = getDate();
 
         int i = 1;
 
@@ -91,7 +97,8 @@ public class NewtonRaphsonModel {
 
         else {
 
-            long endTime = System.currentTimeMillis();
+//            long endTime = System.currentTimeMillis();
+            long endTime = getDate();
 
             double valueApproximate = func_2( x );
 
@@ -109,7 +116,8 @@ public class NewtonRaphsonModel {
 
         System.out.println( String.format( "\nNewton Raphson Method with x0 = %.1f:\n", x ) );
 
-        long startTime = System.currentTimeMillis();
+//        long startTime = System.currentTimeMillis();
+        long startTime = getDate();
 
         int i = 1;
 
@@ -126,7 +134,8 @@ public class NewtonRaphsonModel {
 
         else {
 
-            long endTime = System.currentTimeMillis();
+//            long endTime = System.currentTimeMillis();
+            long endTime = getDate();
 
             double valueApproximate = func_3( x );
 
@@ -144,7 +153,8 @@ public class NewtonRaphsonModel {
 
         System.out.println( String.format( "\nNewton Raphson Method with x0 = %.1f:\n", x ) );
 
-        long startTime = System.currentTimeMillis();
+//        long startTime = System.currentTimeMillis();
+        long startTime = getDate();
 
         int i = 1;
 
@@ -161,7 +171,8 @@ public class NewtonRaphsonModel {
 
         else {
 
-            long endTime = System.currentTimeMillis();
+//            long endTime = System.currentTimeMillis();
+            long endTime = getDate();
 
             double valueApproximate = func_4( x );
 

@@ -24,15 +24,16 @@ public class PrinterHelper {
 
     public static void printReport_Q9() {
 
-        System.out.println("| The Model           | The Convergence | The Root | Iteration Number | CPU Time (ms) |");
+        System.out.println("| The Model           | The Convergence | The Root  | Iteration Number | CPU Time (ms) |");
 
         for ( String model : compareTableQ9.keySet() ) {
 
-            System.out.println( String.format( "| %-19s | %-15f | %-8f | %-16d | %-13f |", model
+            System.out.println( String.format( "| %-19s | %-15f | %-9f | %-16d | %-13d |", model
                                                                                     , compareTableQ9.get( model ).get( "convergence" ) == null ? NaN : ( Double ) compareTableQ9.get( model ).get( "convergence" )
                                                                                     , compareTableQ9.get( model ).get( "root" ) == null ? NaN : ( Double ) compareTableQ9.get( model ).get( "root" )
                                                                                     , compareTableQ9.get( model ).get("iteration") == null ? NaN.intValue() : ( ( Double ) compareTableQ9.get( model ).get("iteration") ).intValue()
-                                                                                    , compareTableQ9.get( model ).get( "cpu" ) == null ? NaN : ( Double ) compareTableQ9.get( model ).get( "cpu" ) ) );
+                                                                                    , compareTableQ9.get( model ).get( "cpu" ) == null ? NaN.intValue() : ( ( Double ) compareTableQ9.get( model ).get( "cpu" ) ).intValue() )
+            );
 
         }
 

@@ -1,6 +1,7 @@
 package model;
 
 import static helper.PrinterHelper.print_Q9;
+import static helper.TimeHelper.getDate;
 import static util.FunctionUtil.Q9.func;
 
 public class RegulaFalsiModel {
@@ -13,15 +14,16 @@ public class RegulaFalsiModel {
         double f0, f1, f2;
         double x2;
 
-        long startTime = System.currentTimeMillis();
+//        long startTime = System.currentTimeMillis();
+        long startTime = getDate();
 
         do {
 
             f0 = func( x0 );
             f1 = func( x1 );
-            
+
             x2 = x1 - f1 * ( x0 - x1 ) / ( f0 - f1 );
-            
+
             f2 = func( x2 );
 
             if ( ( f2 > 0 && f0 < 0 ) || ( f2 < 0 && f0 > 0 ) )
@@ -29,20 +31,21 @@ public class RegulaFalsiModel {
 
             else
                 x0 = x2;
-            
+
             i++;
 
         } while ( Math.abs( f2 ) > epsilon && i <= iterationMax );
 
 
-        long endTime = System.currentTimeMillis();
-        
+        // long endTime = System.currentTimeMillis();
+        long endTime = getDate();
+
         long CPUTime = endTime - startTime;
 
         print_Q9( f2, x2, i, CPUTime );
 
         System.gc();
-        
+
     }
 
 }

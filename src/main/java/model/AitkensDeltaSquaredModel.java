@@ -1,6 +1,7 @@
 package model;
 
 import static helper.PrinterHelper.print_Q9;
+import static helper.TimeHelper.getDate;
 import static util.FunctionUtil.Q9.derivativeFunc;
 import static util.FunctionUtil.Q9.func;
 
@@ -10,7 +11,8 @@ public class AitkensDeltaSquaredModel {
 
         System.out.println( String.format( "\nAitken's Delta-Squared Process via Newton Raphson's Results with x0 = %.1f:\n", x0 ) );
 
-        long startTime = System.currentTimeMillis();
+//        long startTime = System.currentTimeMillis();
+        long startTime = getDate();
 
         int i = 1;
 
@@ -32,7 +34,8 @@ public class AitkensDeltaSquaredModel {
 
         else {
 
-            long endTime = System.currentTimeMillis();
+//            long endTime = System.currentTimeMillis();
+            long endTime = getDate();
 
             double valueApproximate = func( x );
 

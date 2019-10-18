@@ -3,6 +3,7 @@ package model;
 import static helper.PrinterHelper.print_Q9;
 import static helper.ReportHelper.globalResultMap;
 import static helper.ReportHelper.setGlobalResultMap;
+import static helper.TimeHelper.getDate;
 import static util.FunctionUtil.Q9.func;
 
 public class BisectionModel {
@@ -11,7 +12,8 @@ public class BisectionModel {
 
         System.out.println( String.format( "\nBisection Method with a = %.1f and b = %.1f:\n", a, b ) );
 
-        long startTime = System.currentTimeMillis();
+//        long startTime = System.currentTimeMillis();
+        long startTime = getDate();
 
         int i = 1;
 
@@ -46,7 +48,8 @@ public class BisectionModel {
 
         else {
 
-            long endTime = System.currentTimeMillis();
+//            long endTime = System.currentTimeMillis();
+            long endTime = getDate();
 
             double valueApproximate = func( c );
 
