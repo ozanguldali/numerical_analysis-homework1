@@ -2,15 +2,11 @@ package helper;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
-import com.google.gson.reflect.TypeToken;
-
-import java.lang.reflect.Type;
 import java.util.HashMap;
 
 public class ReportHelper {
 
-    public static final HashMap<String, HashMap<String, Object>> compareTableQ9 = new HashMap<String, HashMap<String, Object>>();
+    static final HashMap<String, HashMap<String, Object>> compareTableQ9 = new HashMap<String, HashMap<String, Object>>();
 
     public static HashMap<String, Object> globalResultMap = new HashMap<String, Object>();
 

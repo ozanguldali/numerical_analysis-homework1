@@ -23,7 +23,7 @@ public class AitkensDeltaSquaredModel {
             double x1 = x - func( x ) / derivativeFunc( x );
             double x2 = x1 - func( x1 ) / derivativeFunc( x1 );
 
-            x = x - ( x1 - x ) / ( x2 - 2 * x1 - x );
+            x = x - ( ( x1 - x ) * ( x1 - x ) ) / ( x2 - 2 * x1 + x );
 
             i++;
 

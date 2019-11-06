@@ -1,16 +1,12 @@
 package helper;
 
-import java.util.HashMap;
-
 import static helper.ReportHelper.*;
 
 public class PrinterHelper {
 
-    private static Double NaN = Double.POSITIVE_INFINITY - Double.POSITIVE_INFINITY;
-
     public static void print_Q9(double valueAppx, double rootAppx, int iteration, long CPUTime ) {
 
-        System.out.printf( "The Convergence = %f | The Root = %f | Iteration Number: %d | CPU Time (ms) : %d%n\n" , valueAppx, rootAppx , iteration, CPUTime );
+        System.out.println("The Convergence = " + valueAppx + " | The Root = " + rootAppx + " | Iteration Number: " + iteration + " | CPU Time (ms) : " + CPUTime + " \n");
 
         setGlobalResultMap( valueAppx, rootAppx, iteration, CPUTime );
 
@@ -24,18 +20,24 @@ public class PrinterHelper {
 
     public static void printReport_Q9() {
 
+        System.out.println("________________________________________________________________________________________");
         System.out.println("| The Model           | The Convergence | The Root  | Iteration Number | CPU Time (ms) |");
+        System.out.println("|---------------------|-----------------|-----------|------------------|---------------|");
 
         for ( String model : compareTableQ9.keySet() ) {
 
+            Double naN = Double.POSITIVE_INFINITY - Double.POSITIVE_INFINITY;
+
             System.out.println( String.format( "| %-19s | %-15f | %-9f | %-16d | %-13d |", model
-                                                                                    , compareTableQ9.get( model ).get( "convergence" ) == null ? NaN : ( Double ) compareTableQ9.get( model ).get( "convergence" )
-                                                                                    , compareTableQ9.get( model ).get( "root" ) == null ? NaN : ( Double ) compareTableQ9.get( model ).get( "root" )
-                                                                                    , compareTableQ9.get( model ).get("iteration") == null ? NaN.intValue() : ( ( Double ) compareTableQ9.get( model ).get("iteration") ).intValue()
-                                                                                    , compareTableQ9.get( model ).get( "cpu" ) == null ? NaN.intValue() : ( ( Double ) compareTableQ9.get( model ).get( "cpu" ) ).intValue() )
+                                                                                    , compareTableQ9.get( model ).get( "convergence" ) == null ? naN : ( Double ) compareTableQ9.get( model ).get( "convergence" )
+                                                                                    , compareTableQ9.get( model ).get( "root" ) == null ? naN : ( Double ) compareTableQ9.get( model ).get( "root" )
+                                                                                    , compareTableQ9.get( model ).get("iteration") == null ? naN.intValue() : ( ( Double ) compareTableQ9.get( model ).get("iteration") ).intValue()
+                                                                                    , compareTableQ9.get( model ).get( "cpu" ) == null ? naN.intValue() : ( ( Double ) compareTableQ9.get( model ).get( "cpu" ) ).intValue() )
             );
 
         }
+
+        System.out.println("________________________________________________________________________________________");
 
         System.out.println();
 

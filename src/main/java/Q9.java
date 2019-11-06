@@ -1,5 +1,3 @@
-import java.util.HashMap;
-
 import static helper.PrinterHelper.printReport_Q9;
 import static helper.ReportHelper.*;
 import static model.AitkensDeltaSquaredModel.aitkensDeltaSquared;
