@@ -17,9 +17,13 @@ public class NewtonRaphsonModel {
 
         int i = 1;
 
+        System.out.println( (i-1) + " th step: " + x );
+
         while ( Math.abs( func( x ) ) > epsilon && i <= iterationMax ) {
 
             x = x - func( x ) / derivativeFunc( x );
+
+            System.out.println( (i) + " th step: " + x );
 
             i++;
 

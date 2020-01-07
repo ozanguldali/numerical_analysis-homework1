@@ -20,7 +20,7 @@ public class Q8 {
 
         iterationMax = 1000;
 
-        fixedPointRootError( x_Initial, EPSILON, iterationMax );
+        fixedPointRootError( 0, EPSILON, iterationMax );
 
     }
 

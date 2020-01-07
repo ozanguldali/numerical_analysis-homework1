@@ -16,19 +16,22 @@ public class FunctionUtil {
 
         public static double func(double x) {
 
-            return ( Math.exp( -2 * x ) ) * x + x * Math.cos( x ) - 4 * Math.sin( 2 * x );
+            //return ( Math.exp( -2 * x ) ) * x + x * Math.cos( x ) - 4 * Math.sin( 2 * x );
+            return x * x - x + Math.cos( 2*x );
 
         }
 
         public static double derivativeFunc(double x) {
 
-            return ( -2 ) * ( Math.exp( -2 * x ) ) * x +  Math.exp( -2 * x ) - x * Math.sin( x ) + Math.cos( x ) - 8 * Math.cos( 2 * x );
+            //return ( -2 ) * ( Math.exp( -2 * x ) ) * x +  Math.exp( -2 * x ) - x * Math.sin( x ) + Math.cos( x ) - 8 * Math.cos( 2 * x );
+            return 2*x - 1 - 2*Math.sin( 2*x );
 
         }
 
         public static double gFunc(double x) {
 
-            return ( 4 * Math.sin( 2 * x ) ) / ( Math.exp( -2 * x ) + Math.cos( x ) );
+            //return ( 4 * Math.sin( 2 * x ) ) / ( Math.exp( -2 * x ) + Math.cos( x ) );
+            return x * x + Math.cos( 2*x );
 
         }
 

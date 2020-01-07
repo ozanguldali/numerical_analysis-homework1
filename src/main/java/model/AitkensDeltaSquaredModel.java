@@ -18,12 +18,16 @@ public class AitkensDeltaSquaredModel {
 
         double x = x0;
 
+        System.out.println( (i-1) + " th step: " + x );
+
         while ( Math.abs( func( x ) ) > epsilon && i <= iterationMax ) {
 
             double x1 = x - func( x ) / derivativeFunc( x );
             double x2 = x1 - func( x1 ) / derivativeFunc( x1 );
 
             x = x - ( ( x1 - x ) * ( x1 - x ) ) / ( x2 - 2 * x1 + x );
+
+            System.out.println( (i) + " th step: " + x );
 
             i++;
 

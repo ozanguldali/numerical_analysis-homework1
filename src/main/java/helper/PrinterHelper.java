@@ -22,7 +22,7 @@ public class PrinterHelper {
 
         System.out.println("________________________________________________________________________________________");
         System.out.println("| The Model           | The Convergence | The Root  | Iteration Number | CPU Time (ms) |");
-        System.out.println("|---------------------|-----------------|-----------|------------------|---------------|");
+        System.out.println("|---------------------|-----------------|-----------| ------------------|---------------|");
 
         for ( String model : compareTableQ9.keySet() ) {
 

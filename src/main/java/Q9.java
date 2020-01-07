@@ -17,7 +17,7 @@ public class Q9 {
 
         double x0 = 1, x1 = 1.1;
 
-        clearGlobalResultMap();
+        /*clearGlobalResultMap();
         bisection( a, b, EPSILON, 1000 );
         setCompareTableQ9( "bisection" );
 
@@ -27,7 +27,7 @@ public class Q9 {
         regulaFalsi(x0, x1, EPSILON, 1000);
         setCompareTableQ9( "regulaFalsi" );
 
-        System.out.println( "---" );
+        System.out.println( "---" );*/
 
         clearGlobalResultMap();
         newtonRaphson_Q9(x0, EPSILON, 1000);
@@ -41,11 +41,11 @@ public class Q9 {
 
         System.out.println( "---" );
 
-        clearGlobalResultMap();
+        /*clearGlobalResultMap();
         secant(x0, x1, EPSILON, 1000);
         setCompareTableQ9( "secant" );
 
-        System.out.println( "---" );
+        System.out.println( "---" );*/
 
         clearGlobalResultMap();
         fixedPointFuncError_Q9( x0, EPSILON, 1000);
