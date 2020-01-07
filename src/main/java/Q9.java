@@ -9,7 +9,8 @@ import static model.SecantModel.secant;
 
 public class Q9 {
 
-    private static final double EPSILON = 0.00001;
+    private static final double EPSILON = 0.0000000000000001;
+    private static final int ITERATION_LIMIT = 6;
 
     public static void main(String[] args) {
 
@@ -30,13 +31,13 @@ public class Q9 {
         System.out.println( "---" );*/
 
         clearGlobalResultMap();
-        newtonRaphson_Q9(x0, EPSILON, 1000);
+        newtonRaphson_Q9(x0, EPSILON, ITERATION_LIMIT);
         setCompareTableQ9( "newtonRaphson" );
 
         System.out.println( "---" );
 
         clearGlobalResultMap();
-        aitkensDeltaSquared(x0, EPSILON, 1000);
+        aitkensDeltaSquared(x0, EPSILON, ITERATION_LIMIT);
         setCompareTableQ9( "aitkensDeltaSquared" );
 
         System.out.println( "---" );
@@ -48,7 +49,7 @@ public class Q9 {
         System.out.println( "---" );*/
 
         clearGlobalResultMap();
-        fixedPointFuncError_Q9( x0, EPSILON, 1000);
+        fixedPointFuncError_Q9( x0, EPSILON, ITERATION_LIMIT);
         setCompareTableQ9( "fixedPoint" );
 
         printReport_Q9();

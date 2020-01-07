@@ -65,9 +65,13 @@ public class FixedPointModel {
 
         int i = 1;
 
+        System.out.println( (i-1) + " th step: " + x_Initial );
+
         while( i < iterationMax ) {
 
             x_Approx = FunctionUtil.Q9.gFunc( x_Initial );
+
+            System.out.println( (i) + " th step: " + x_Approx );
 
             if( Math.abs( func( x_Approx ) ) <= epsilon ){
 
