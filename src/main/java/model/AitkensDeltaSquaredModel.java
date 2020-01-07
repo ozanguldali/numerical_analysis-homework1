@@ -1,5 +1,7 @@
 package model;
 
+import util.FunctionUtil;
+
 import static helper.PrinterHelper.print_Q9;
 import static helper.TimeHelper.getDate;
 import static util.FunctionUtil.Q9.derivativeFunc;
@@ -18,7 +20,7 @@ public class AitkensDeltaSquaredModel {
 
         double x = x0;
 
-        System.out.println( (i-1) + " th step: " + x );
+        System.out.println( (i-1) + " th step: " + x + " -> convergence :" + FunctionUtil.Q9.func( x ) );
 
         while ( Math.abs( func( x ) ) > epsilon && i <= iterationMax ) {
 
@@ -27,7 +29,7 @@ public class AitkensDeltaSquaredModel {
 
             x = x - ( ( x1 - x ) * ( x1 - x ) ) / ( x2 - 2 * x1 + x );
 
-            System.out.println( (i) + " th step: " + x );
+            System.out.println( (i) + " th step: " + x + " -> convergence :" + FunctionUtil.Q9.func( x ) );
 
             i++;
 

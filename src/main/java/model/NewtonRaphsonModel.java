@@ -1,5 +1,7 @@
 package model;
 
+import util.FunctionUtil;
+
 import static helper.PrinterHelper.print_Q9;
 import static helper.TimeHelper.getDate;
 import static util.FunctionUtil.Q10.*;
@@ -17,13 +19,13 @@ public class NewtonRaphsonModel {
 
         int i = 1;
 
-        System.out.println( (i-1) + " th step: " + x );
+        System.out.println( (i-1) + " th step: " + x + " -> convergence :" + FunctionUtil.Q9.func( x ) );
 
         while ( Math.abs( func( x ) ) > epsilon && i <= iterationMax ) {
 
             x = x - func( x ) / derivativeFunc( x );
 
-            System.out.println( (i) + " th step: " + x );
+            System.out.println( (i) + " th step: " + x + " -> convergence :" + FunctionUtil.Q9.func( x ) );
 
             i++;
 
